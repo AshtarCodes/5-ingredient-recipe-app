@@ -26,7 +26,7 @@ async function getRecipe () {
             document.querySelector('.recipe-name').innerText = data.name
             document.querySelector('.author').innerText = data.author
             document.querySelector('.description').innerText = data.description
-            document.querySelector('.recipe-link').innerText = data.link
+            document.querySelector('.recipe-link').innerText = `Find the recipe here: ${data.link}`
             document.querySelector('#ingredient-1').innerText = data.ingredients[0].name
             document.querySelector('#amount-1').innerText = data.ingredients[0].amount
             document.querySelector('#ingredient-2').innerText = data.ingredients[1].name
