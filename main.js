@@ -1,7 +1,5 @@
 let input = document.querySelector('#recipeName')
 
-document.querySelector('.submit').addEventListener('click', getRecipe)
-
 // Execute a function when the user presses a key on the keyboard
 input.addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
@@ -13,11 +11,13 @@ input.addEventListener("keyup", function(event) {
     }
 });
 
+document.querySelector('#submit').addEventListener('click', getRecipe)
+
+
 async function getRecipe () {
     let recipeName = document.querySelector('#recipeName').value
     console.log(recipeName);
-    // recipeName = recipeName.split(' ').map((el, i, arr) => { (el !== arr[arr.length-1]) ? el + '%20' : el}).join('');
-    // console.log(recipeName);    
+       
     try {
         const response = await fetch(`https://ash-recipe-api.herokuapp.com/api/recipes/${recipeName}`)
         const data = await response.json()
@@ -44,12 +44,23 @@ async function getRecipe () {
             } else {
                 document.querySelector('.video-container').classList.add('display-none')
             }
-
-
-        }       
-
+        } 
     } catch (error) {
         console.log(error);
+        document.querySelector('.recipe-name').innerText = `We don't have this recipe yet. Sorry!`
+        document.querySelector('.author').innerText = null
+            document.querySelector('.description').innerText = null
+            document.querySelector('.recipe-link').innerText = null
+            document.querySelector('#ingredient-1').innerText = null
+            document.querySelector('#amount-1').innerText = null
+            document.querySelector('#ingredient-2').innerText = null
+            document.querySelector('#amount-2').innerText = null
+            document.querySelector('#ingredient-3').innerText = null
+            document.querySelector('#amount-3').innerText = null
+            document.querySelector('#ingredient-4').innerText = null
+            document.querySelector('#amount-4').innerText = null
+            document.querySelector('#ingredient-5').innerText = null
+            document.querySelector('#amount-5').innerText = null
     }
 
 
