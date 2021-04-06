@@ -11,7 +11,9 @@ This is a webapp that displays five-ingredient recipes. It aims to help the worl
 
 **Tech used:**  HTML, CSS, vanilla Javascript
 
-I love to cook, and I **still** want to spend less time doing it. I built this without any frameworks so I could continue strenghthening my fundamental skills further.
+I love to cook, and I **still** want to spend less time doing it. I'm betting you feel this way as well. 
+
+Note: I built this without any frameworks so I could continue strenghthening my fundamental skills further.
 
 ## Optimizations (Coming soon)
 
