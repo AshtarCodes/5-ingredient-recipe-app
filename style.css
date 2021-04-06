@@ -28,6 +28,12 @@ body {
     grid-column: 2/-2 ;
 }
 
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: minmax(1rem, 1fr) repeat(3, minmax(200px, 450px)) minmax(1rem, 1fr);
+    }
+}
+
 .ingredients-list{
     list-style: none;
 }
