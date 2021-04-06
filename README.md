@@ -1,7 +1,7 @@
 # 5-Ingredient Recipe Webapp
 This is a webapp that displays five-ingredient recipes. It aims to help the world spend less time cooking, and more time connecting. 
 
-**Link to client-side webapp:** https://fiveingedientlookup.netlify.app
+**Link to client-side webapp:** https://fiveingredientlookup.netlify.app
 
 **Link to API:** https://ash-recipe-api.herokuapp.com
 
