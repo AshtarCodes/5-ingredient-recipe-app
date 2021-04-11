@@ -15,11 +15,13 @@ document.querySelector('#submit').addEventListener('click', getRecipe)
 
 
 async function getRecipe () {
-    let recipeName = document.querySelector('#recipeName').value
+    let recipeName = document.querySelector('#recipeName').value.toLowerCase()
+    recipeName = recipeName.split(' ').join(' ');
     console.log(recipeName);
        
     try {
-        const response = await fetch(`https://ash-recipe-api.herokuapp.com/api/recipes/${recipeName}`)
+        const response = await fetch(`http://localhost:8000/api/recipes/${recipeName}`)
+        // const response = await fetch(`https://ash-recipe-api.herokuapp.com/api/recipes/${recipeName}`)
         const data = await response.json()
         console.log(data);
         if (typeof data === "object"){
@@ -40,28 +42,31 @@ async function getRecipe () {
 
             if (data.video !== null){
                 document.querySelector('iframe').src = data.video;
-                document.querySelector('.video-container').classList.remove('display-none')
+                document.querySelector('iframe').classList.remove('display-none')
+                document.querySelector('#videoContainer').classList.remove('display-none')
+                document.querySelector('#videoContainer').classList.add('video-container')
             } else {
-                document.querySelector('.video-container').classList.add('display-none')
+                document.querySelector('iframe').src = '';
+                document.querySelector('iframe').classList.add('display-none')
+                document.querySelector('#videoContainer').classList.add('display-none')
+                document.querySelector('#videoContainer').classList.remove('video-container')
             }
         } 
     } catch (error) {
         console.log(error);
         document.querySelector('.recipe-name').innerText = `We don't have this recipe yet. Sorry!`
         document.querySelector('.author').innerText = null
-            document.querySelector('.description').innerText = null
-            document.querySelector('.recipe-link').innerText = null
-            document.querySelector('#ingredient-1').innerText = null
-            document.querySelector('#amount-1').innerText = null
-            document.querySelector('#ingredient-2').innerText = null
-            document.querySelector('#amount-2').innerText = null
-            document.querySelector('#ingredient-3').innerText = null
-            document.querySelector('#amount-3').innerText = null
-            document.querySelector('#ingredient-4').innerText = null
-            document.querySelector('#amount-4').innerText = null
-            document.querySelector('#ingredient-5').innerText = null
-            document.querySelector('#amount-5').innerText = null
+        document.querySelector('.description').innerText = null
+        document.querySelector('.recipe-link').innerText = null
+        document.querySelector('#ingredient-1').innerText = null
+        document.querySelector('#amount-1').innerText = null
+        document.querySelector('#ingredient-2').innerText = null
+        document.querySelector('#amount-2').innerText = null
+        document.querySelector('#ingredient-3').innerText = null
+        document.querySelector('#amount-3').innerText = null
+        document.querySelector('#ingredient-4').innerText = null
+        document.querySelector('#amount-4').innerText = null
+        document.querySelector('#ingredient-5').innerText = null
+        document.querySelector('#amount-5').innerText = null
     }
-
-
 }

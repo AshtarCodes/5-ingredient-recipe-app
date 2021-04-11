@@ -11,22 +11,21 @@
     <main>
         <div class="wrapper">
             <div class="grid">
-
                 <div class="container">
                     <h1>Welcome to Ash's Five-Ingredient Recipe Lookup</h1>
-                    <div class="row">
+                    <section class="row">
                         <h2>Search for a 5-ingredient recipe here:</h2>
                         <input id='recipeName' type="text" name="" placeholder="Enter recipe name"><button id='submit' type="button" name='button'>Submit</button>
                         <p>Recipes as of now: Ginger beer, granola bars</p>
-                    </div>
-                    <div class="row">
+                    </section>
+                    <section class="row">
                         <h2 class="recipe-name"></h2>
-                        <div class="info-container">
+                        <section class="info-container">
                             <span class="author"></span></span>
                             <p class="description"></p>
                             <p class="recipe-link"></p>
-                        </div>
-                        <div class="ingredients-container">
+                        </section>
+                        <section class="ingredients-container">
                             <ul class="ingredients-list">
                                 <li id='ingredient-1' class="ingredient"></li><span id='amount-1' class="amount"></span>
                                 <li id='ingredient-2' class="ingredient"></li><span id='amount-2' class="amount"></span>
@@ -34,11 +33,11 @@
                                 <li id='ingredient-4' class="ingredient"></li><span id='amount-4' class="amount"></span>
                                 <li id='ingredient-5' class="ingredient"></li><span id='amount-5' class="amount"></span>
                             </ul>
-                        </div>
-                        <div class="video-container">
+                        </section>
+                        <div class="video-container" id='videoContainer'>
                             <iframe width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </section>
                     <div class="row">
                         <p>If you can't find your recipe, know that I am adding more recipes soon! Feel free to submit recipe suggestions in the form! <span class='font-accent'>Coming Soon</span></p>
                         <p>Thanks for visiting!</p>
