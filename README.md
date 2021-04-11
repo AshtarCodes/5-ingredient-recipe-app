@@ -1,5 +1,5 @@
 # 5-Ingredient Recipe Webapp
-This is a webapp that displays five-ingredient recipes. It aims to help the world spend less time cooking, and more time connecting. 
+This is a full-stack webapp that displays five-ingredient recipes. It aims to help the world spend less time cooking, and more time connecting. 
 
 **Link to client-side webapp:** https://fiveingredientlookup.netlify.app
 
@@ -11,9 +11,9 @@ This is a webapp that displays five-ingredient recipes. It aims to help the worl
 
 **Tech used:**  HTML, CSS, vanilla Javascript
 
-I love to cook, and I **still** want to spend less time doing it. I'm betting you feel this way as well. 
+I made this because I love to cook, and I **still** want to spend less time doing it. I'm betting you feel this way as well. 
 
-Note: I built this without any frameworks so I could continue strenghthening my fundamental skills further.
+Also, I intentionally built this without any frameworks so I could continue to strenghthen my fundamental skills further.
 
 ## Optimizations (Coming soon)
 
