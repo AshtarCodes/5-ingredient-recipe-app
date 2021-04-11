@@ -20,8 +20,7 @@ async function getRecipe () {
     console.log(recipeName);
        
     try {
-        const response = await fetch(`http://localhost:8000/api/recipes/${recipeName}`)
-        // const response = await fetch(`https://ash-recipe-api.herokuapp.com/api/recipes/${recipeName}`)
+        const response = await fetch(`https://ash-recipe-api.herokuapp.com/api/recipes/${recipeName}`)
         const data = await response.json()
         console.log(data);
         if (typeof data === "object"){
